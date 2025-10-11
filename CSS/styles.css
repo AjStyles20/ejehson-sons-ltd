@@ -1,35 +1,41 @@
 /* WhatsApp Floating Button Fix */
+/* ===== WHATSAPP FLOAT BUTTON (FIXED & RESPONSIVE) ===== */
 .whatsapp-float {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 .whatsapp-float svg {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   display: block;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 600px) {
   .whatsapp-float {
-    width: 48px;
-    height: 48px;
-    bottom: 16px;
-    right: 16px;
+    width: 44px;
+    height: 44px;
+    bottom: 12px;
+    right: 12px;
   }
   .whatsapp-float svg {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
   }
 }
 /* ===== RESET & BASE STYLES ===== */
