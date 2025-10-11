@@ -63,114 +63,49 @@ body {
   background-color: #090909d2;
 }
 
-/* ===== TOP BANNER ===== */
-.banner {
-  background-color: var(--primary);
-  color: rgb(255, 255, 255);
-  padding: 8px 5%;
+/* ===== WHATSAPP FLOAT BUTTON (CLEAN, RESPONSIVE, SVG ONLY) ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-}
-
-#language-switch {
-  display: flex;
-  gap: 5px;
-}
-
-.lang-btn {
-  background: rgba(255,255,255,0.2);
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s;
   border: none;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 3px;
+  outline: none;
   cursor: pointer;
+  overflow: hidden;
 }
-
-.lang-btn.active {
-  background: var(--secondary);
-  font-weight: bold;
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
-
-/* ===== HEADER ===== */
-header {
-  background: rgb(244, 245, 237);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 15px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
-
-.logo-placeholder {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 36px;
+    height: 36px;
+    bottom: 8px;
+    right: 8px;
+  }
+  .whatsapp-float svg {
+    width: 20px;
+    height: 20px;
+  }
 }
-
-.logo-placeholder h1 {
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-.logo-placeholder p {
-  font-size: 0.9rem;
-  color: var(--gray);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--secondary);
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('assets/placeholder-transformer.jpg') center/cover;
-  height: 80vh;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  color: white;
-  padding: 0 5%;
-}
-
-.hero-content {
-  max-width: 650px;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
+/* Removed orphaned CSS properties that were outside of a selector block */
 
 .whatsapp-btn, .call-btn {
   padding: 12px 25px;
